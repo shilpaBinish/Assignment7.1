@@ -1,0 +1,5 @@
+library(tidyr)
+library(ggplot2)
+mtcars %>%gather()
+ggplot(gather(mtcars),aes(value))+geom_histogram(bins = 10)+facet_wrap(~key,scales = 'free_x')
+boxplot(mtcars)
